@@ -5,21 +5,21 @@
 class Epm < Formula
   desc "Terminal dashboard for Elasticsearch cluster performance monitoring"
   homepage "https://github.com/jtsunne/epm-go"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jtsunne/epm-go/releases/download/v0.2.0/epm_0.2.0_darwin_amd64.tar.gz"
-      sha256 "069232d54939f905b514ccdeef63eca86cc345b113ea063c8016a2f72f83efe4"
+      url "https://github.com/jtsunne/epm-go/releases/download/v0.3.0/epm_0.3.0_darwin_amd64.tar.gz"
+      sha256 "06382c1b83d597d2a14e5bf60b6e1e88b5c4cbca838b36ff983c3c2566c71a3b"
 
       define_method(:install) do
         bin.install "epm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jtsunne/epm-go/releases/download/v0.2.0/epm_0.2.0_darwin_arm64.tar.gz"
-      sha256 "1e08d750802a6d634833c4308aea787dbfd151ce1302e104d04eda8a0d6be56b"
+      url "https://github.com/jtsunne/epm-go/releases/download/v0.3.0/epm_0.3.0_darwin_arm64.tar.gz"
+      sha256 "2931c4d3721e3ce914425751f60e18f67a7be02c449cd642419cfe55b329ae5f"
 
       define_method(:install) do
         bin.install "epm"
@@ -29,15 +29,15 @@ class Epm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jtsunne/epm-go/releases/download/v0.2.0/epm_0.2.0_linux_amd64.tar.gz"
-      sha256 "2e2d3927db197ee3d66c13ec67e7345b47b87507e8a6db31383164425ee23582"
+      url "https://github.com/jtsunne/epm-go/releases/download/v0.3.0/epm_0.3.0_linux_amd64.tar.gz"
+      sha256 "600fb842c9d6dad3568625994731fca54cd83831b4f90d8563613d31f895968e"
       define_method(:install) do
         bin.install "epm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jtsunne/epm-go/releases/download/v0.2.0/epm_0.2.0_linux_arm64.tar.gz"
-      sha256 "50eb4a5352521d284b655bbfb5bcea862bdf2fc0bdbc43cb1e61b892ad3905e1"
+      url "https://github.com/jtsunne/epm-go/releases/download/v0.3.0/epm_0.3.0_linux_arm64.tar.gz"
+      sha256 "c9c025331b2bb06a39d260a394d1c911def9332e126f09f8cc4287a4bba1172d"
       define_method(:install) do
         bin.install "epm"
       end
